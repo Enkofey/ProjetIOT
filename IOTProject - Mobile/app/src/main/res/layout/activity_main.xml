@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="match_parent"
+    tools:context=".View.Activity.MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/menuNavigationBarCardView"
+        app:layout_constraintTop_toTopOf="parent"></FrameLayout>
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="45dp"
+        app:cardBackgroundColor="@color/grey"
+        android:layout_margin="16dp"
+        android:id="@+id/menuNavigationBarCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/menuNavigationBar"
+            android:layout_width="match_parent"
+            android:background="@color/grey"
+            android:layout_height="70dp"
+            app:itemIconSize="32dp"
+            app:itemTextColor="@color/bottom_nav_color"
+            app:itemIconTint="@color/bottom_nav_color"
+            app:menu="@menu/bottom_nav_bar"
+            tools:layout_editor_absoluteX="0dp" />
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
